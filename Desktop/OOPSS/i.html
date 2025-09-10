@@ -1,0 +1,52 @@
+<!--
+<!DOCTYPE html>
+<html>
+  <head><title>DOM XSS Demo</title></head>
+  <body>
+    <form method="get">
+      <input type="text" name="query" placeholder="enter">
+      <input type="submit" value="submit">
+    </form>
+
+      <script type="text/javascript">
+        document.write('Hello') // inspect kr ke dekho is ko a rha hello
+        // document.write(location) // url de dein ge
+        // document.write(location.href)  // uper wale line ke trha url de dein ge
+        // Hamara page source pe nhi nazar ai ga inspect yah wo page pe nazar ai ga like is coding ke jaga par nhi nazar ai ga
+        // Yeh document write location wale line server se nhi a rhy yeh js se he is code se he hamare body me daal rha server involve nhi
+        // is case me source location.href ha jaha se payload mil rha to yani jo ham ne payload dala input me yah url me wo a to is ke waja se rha hai na, and document.write jo output kr rha hamare payload ko html document me wo sink ha, lakin abhi agar me script wagera kuch likh rha input me to wo encode kr ek a rha modern browsers nhi ane dete page me is trha ke cheez to agar me document.write(decodeURI(location.href)) ese likh du to decode ho jaye ga, ab yeh koi farigh developer hua kar dia to kaam ban jai ga warna nhi yani us ne agar yeh line likh de to xss ho jaye ga wrna nhi ho ga
+        document.write(decodeURI(location.href)) // to is ko kar ke <svg/onload=alert()> ye likhe ge to elenet add ho jai ga inspect me
+      </script>
+  </body>
+</html>
+-->
+
+<!-- Trying next payload -->
+
+<!DOCTYPE html>
+<html>
+  <head><title>DOM XSS Demo</title></head>
+  <body>
+    <p id="demo"></p>
+    <form method="get">
+      <input type="text" name="query" placeholder="enter">
+      <input type="submit" value="submit">
+    </form>
+
+      <script type="text/javascript">
+        //document.getElementById('demo').innerHTML = location.href ---> ab is case me location.href source ha yaha se payload a rha and innerhtml sink hai lakin p tag me gya yeh yrl lakin encoded to dubara se wo line likhne pare ge agar sahi url chaye encode na kre wo < > scripts ko
+        // document.getElementById('demo').innerHTML = decodeURI(location.href)
+
+
+        //Now this ->
+        window.location = location.hash; //location.hash → URL ka # ke baad ka part hota hai.
+        //   setInterval(() => {
+        // window.location = "#x" + Math.random(); // Change hash every time
+        //   }, 1000);
+        // document.write(location.hash)
+        // window.location = location.hash.substring (1) // substring(1) take # ke bad se start ho  ka matlab hai: URL ke # ke baad jo likha ho, uspe redirect karo — agar yeh attacker control kare to XSS ya loop ho sakta hai. IS ME JAB AAP JS CODE DALTE HO TO EXECUTE HO JAYE GA AGAR VALID HUA TO LIKE THIS -> #javascript:alert(1) CAN ALSO CHECK COOKIE
+        eval(decodeURIComponent(location.hash.substring(1))); // yeh line likhe uper wale me javascript: likh rhy the is me wese sirf alert daal do kaam kre ga
+      </script>
+  </body>
+</html>
+

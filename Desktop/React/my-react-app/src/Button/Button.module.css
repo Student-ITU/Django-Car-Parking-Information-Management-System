@@ -1,0 +1,9 @@
+.butt {
+  background-color: rgb(111, 231, 231);
+  color: rgb(143, 141, 141);
+  border-radius: 5px;
+  border: none;
+  height: 50px;
+  width: 100px;
+  cursor: pointer;
+}

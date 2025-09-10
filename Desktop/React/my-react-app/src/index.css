@@ -1,0 +1,160 @@
+.card {
+  border: 1px solid;
+  border-radius: 10px;
+  width: 700px;
+  height: 500px;
+  min-height: 700px;
+  box-shadow: 5px 5px 5px rgb(166, 166, 166);
+  margin:20px;
+  text-align: center;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  /* display: inline-block;It will work after display: flex but display flex will not work if i write it, so that is why i am using text-align: center, which will enter all the content inside the div*/
+}
+
+.card .imgg {
+  padding: 30px;
+  border-radius: 30px;
+  padding-bottom: 10px
+}
+
+.card .name {
+  font-family:sans-serif;
+
+}
+
+.card .description {
+  font-size: medium;
+  padding-bottom: 15px;
+}
+
+
+/* Button wale component ke lie external css neeche ha, sab css ke pros and cons notes likhe hain, neeche wala external css ke lie hai, module me hota yeh hai ke jo aap component button banate ho us ka folder bana lete, button.jsx ko us me bhejte and use button me us ke Button.module.css file banate to aik folder me button.jsx and us ke specific css hote, baki path change kr dena button ka , and css ko import bhe krna agar module wala kaam kar rhy to us ke file ko button.jsx me krna import */
+
+.butt {
+  background-color: rgb(217, 128, 202);
+  color: rgb(143, 141, 141);
+  border-radius: 5px;
+  border: none;
+  height: 50px;
+  width: 100px;
+  cursor: pointer;
+}
+
+.welcome-message {
+  font-size: 2rem;
+  background-color: green;
+  text-align: center;
+  color: white;
+  padding: 10px;
+}
+
+.login-prompt {
+  font-size: 2rem;
+  text-align: center;
+  background-color: rgb(157, 23, 23);
+  color: white;
+  padding: 10px;
+}
+
+
+
+
+.PicSize {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;  /* Example: circle banane ke liye */
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.color-picker-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin: 50px;
+  font-size: 3rem;
+}
+
+.color-display {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid hsl(0, 0%, 80%);
+  border-radius: 25px;
+  margin-bottom: 25px;
+  transition: 0.3s ease; 
+  /* Bare maze ke cheez  transition: 0.3s ease; jab me color drag kr rha hu ga mujhe uper color 0.3s bad show ho ga agar 5 sec kar dia to me red pe drag kar chuka hu ga us ke 5 sec baad nazar ai ga*/
+}
+
+
+.color-display p {
+  color: hsl(0, 0%, 20%);
+  font-size: 2rem;
+  text-align: center;
+}
+
+label {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+input[type="color"]{
+  /* Ab yeh input[type="color"] sirf wo input pakre ga jis ke type color ke ho */
+  width: 75px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 10px;
+  border: 3px solid hsl(0, 0%, 80%);
+}
+
+.box {
+  border: 2px solid black;
+  padding:25px;
+}
+
+
+.div1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh; /* Full viewport height */
+  border: 2px solid black;
+  background-color: rgb(169, 177, 89);
+}
+
+.divInside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  margin-top: 15px;
+  height: 30px;
+  width: 80px;
+}
+
+.div0 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh; /* Full viewport height */
+  border: 2px solid black;
+}
+
+.active-link {
+  font-weight: bold;
+  color: red;
+  text-decoration: underline;
+}

@@ -1,0 +1,6 @@
+/* static files hote yeh, css yah koi img in ko static folder me dalte */
+
+.cssAddKe {
+    color: brown; 
+    /* Tou abhi sirf link krne se kaam nhi bane ga cz files django ne dekh ehe nhi, is lie abhi color bhe nhi a rha, to us ke lie index.html me css ke link me dekho kya kia me ne and is line ko sab se uper include kia {% load static %} */
+}

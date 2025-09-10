@@ -1,0 +1,3 @@
+Average grade of Sameer is : 3.1
+Average grade of Ahmad is : 3.13333
+Average grade of Okasha is : 9.66667

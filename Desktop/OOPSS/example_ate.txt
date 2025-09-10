@@ -1,0 +1,4 @@
+Line 1: Initial data
+Line 2: Initial data
+e
+Line 3: Appended data
