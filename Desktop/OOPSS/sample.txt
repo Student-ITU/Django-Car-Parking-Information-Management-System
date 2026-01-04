@@ -1,2 +1,0 @@
-cd "/Users/sameershahzad/Desktop/OOPs/" && g++ ASSIGNMENT_3.cpp -o ASSIGNMENT_3 && "/Users/sameershahzad/Desktop/OOPs/"ASSIGNMENT_3
-cd "/Users/sameershahzad/Desktop/OOPs/" && g++ ASSIGNMENT_3.cpp -o ASSIGNMENT_3 && "/Users/sameershahzad/Desktop/OOPs/"ASSIGNMENT_3
